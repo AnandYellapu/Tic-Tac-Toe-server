@@ -26,7 +26,7 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 // app.use(cors()); // Use the cors package for CORS headers
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
