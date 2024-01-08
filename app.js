@@ -13,6 +13,8 @@ const connectDatabase = require('./config/database.js');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var gameRoutes = require('./routes/gameRoutes');
+var gameRoute = require('./routes/gameRoute');
+var gamesRoutes = require('./routes/gamesRoutes');
 
 
 
@@ -35,6 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/game', gameRoutes);
+app.use('/api/games', gameRoute);
+app.use('/api/gamess', gamesRoutes);
 
 
 
